@@ -8,6 +8,7 @@
 
 #import "AppCell.h"
 #import "AppModel.h"
+#import "UIImageView+WebCache.h"
 
 @implementation AppCell
 
@@ -17,6 +18,8 @@
     
     self.nameLabel.text = app.name;
     self.downloadLabel.text = app.download;
+    
+    [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:app.icon] placeholderImage:[UIImage imageNamed:@"user_default"]];
     
 }
 
