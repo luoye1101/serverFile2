@@ -36,6 +36,7 @@
 		67BEA38F1D6B1978002C62BF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BEA38C1D6B1978002C62BF /* ViewController.m */; };
 		67BEA3931D6B1980002C62BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BEA3921D6B1980002C62BF /* AppDelegate.m */; };
 		67BEA3961D6B1C5D002C62BF /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BEA3951D6B1C5D002C62BF /* AppModel.m */; };
+		67BEA3991D6B20CD002C62BF /* AppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BEA3981D6B20CD002C62BF /* AppCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +98,8 @@
 		67BEA3921D6B1980002C62BF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		67BEA3941D6B1C5D002C62BF /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppModel.h; path = ../../ThirdLib/AppModel.h; sourceTree = "<group>"; };
 		67BEA3951D6B1C5D002C62BF /* AppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppModel.m; path = ../../ThirdLib/AppModel.m; sourceTree = "<group>"; };
+		67BEA3971D6B20CD002C62BF /* AppCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCell.h; sourceTree = "<group>"; };
+		67BEA3981D6B20CD002C62BF /* AppCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +252,8 @@
 			isa = PBXGroup;
 			children = (
 				67BEA3341D6B1875002C62BF /* Main.storyboard */,
+				67BEA3971D6B20CD002C62BF /* AppCell.h */,
+				67BEA3981D6B20CD002C62BF /* AppCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -341,6 +346,7 @@
 				67BEA37E1D6B1910002C62BF /* SDWebImageDownloader.m in Sources */,
 				67BEA3791D6B1910002C62BF /* MKAnnotationView+WebCache.m in Sources */,
 				67BEA37C1D6B1910002C62BF /* SDWebImageCompat.m in Sources */,
+				67BEA3991D6B20CD002C62BF /* AppCell.m in Sources */,
 				67BEA3961D6B1C5D002C62BF /* AppModel.m in Sources */,
 				67BEA3811D6B1910002C62BF /* SDWebImagePrefetcher.m in Sources */,
 				67BEA3881D6B1910002C62BF /* UIView+WebCacheOperation.m in Sources */,

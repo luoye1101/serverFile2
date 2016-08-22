@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "AFNetworking.h"
 #import "AppModel.h"
+#import "AppCell.h"
 
 @interface ViewController () <UITableViewDataSource>
 
@@ -37,12 +38,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"appsCell" forIndexPath:indexPath];
+    AppCell *cell = [tableView dequeueReusableCellWithIdentifier:@"appsCell" forIndexPath:indexPath];
     
     AppModel *app = _appList[indexPath.row];
     
-    cell.textLabel.text = app.name;
-    cell.detailTextLabel.text = app.download;
+    cell.app = app;
     
     return cell;
     
