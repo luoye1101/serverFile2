@@ -10,7 +10,7 @@
 #import "AFNetworking.h"
 #import "AppModel.h"
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDataSource>
 
 @end
 
@@ -28,6 +28,28 @@
     
 }
 
+#pragma mark - TableView的数据源方法
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return _appList.count;
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"appsCell" forIndexPath:indexPath];
+    
+    AppModel *app = _appList[indexPath.row];
+    
+    cell.textLabel.text = app.name;
+    cell.detailTextLabel.text = app.download;
+    
+    return cell;
+    
+}
+
+
+#pragma mark - 加载Json数据
 - (void)loadJsonData {
     
     //1. 创建网络请求管理者
@@ -57,6 +79,9 @@
         _appList = tempM.copy;
         
         NSLog(@"%@",_appList);
+        
+        //刷新列表
+        [self.tableView reloadData];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
